@@ -4,10 +4,12 @@ import java.net.Socket;
 import java.util.List;
 
 import javafx.util.Pair;
+import napredno.programiranje.domain.City;
 import napredno.programiranje.domain.Customer;
 import napredno.programiranje.domain.Invoice;
 import napredno.programiranje.domain.InvoiceItem;
 import napredno.programiranje.domain.InvoiceReceptionType;
+import napredno.programiranje.domain.Producer;
 import napredno.programiranje.domain.Product;
 import napredno.programiranje.domain.User;
 
@@ -231,6 +233,28 @@ public class Communication {
         Response response = (Response) receiver.receive();
         if (response.getException() == null) {
             return response;
+        } else {
+            throw response.getException();
+        }
+    }
+    
+    public List<City> getAllCities() throws Exception {
+        Request request = new Request(Operation.GET_ALL_CITIES, null);
+        sender.send(request);
+        Response response = (Response) receiver.receive();
+        if (response.getException() == null) {
+            return (List<City>) response.getResult();
+        } else {
+            throw response.getException();
+        }
+    }
+    
+    public List<Producer> getAllProducers() throws Exception {
+        Request request = new Request(Operation.GET_ALL_PRODUCERS, null);
+        sender.send(request);
+        Response response = (Response) receiver.receive();
+        if (response.getException() == null) {
+            return (List<Producer>) response.getResult();
         } else {
             throw response.getException();
         }
