@@ -33,6 +33,12 @@
 	    <version>17.0.8</version>
 	</dependency>
     
+    <dependency>
+		<groupId>napredno.programiranje</groupId>
+ 		 <artifactId>common-np</artifactId>
+  		<version>1.1.0</version>
+	</dependency>
+    
   </dependencies>
 
   <build>
