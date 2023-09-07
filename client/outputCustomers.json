@@ -1,0 +1,1 @@
+[{"customerID":15,"customerName":"Tehnomanija","address":"Milesevska 13","VATnumber":"123456789","companyNumber":"12345678","city":{"cityID":2,"cityName":"Beograd","postalCode":"11000"}},{"customerID":16,"customerName":"iStyle","address":"Vinogradarska 7","VATnumber":"998877665","companyNumber":"91827364","city":{"cityID":1,"cityName":"Aleksandrovac","postalCode":"37230"}}]
